@@ -99,14 +99,14 @@ const Profile = () => {
           </motion.div>
         ))}
       </div>
-      <div className="lg:hidden grid grid-cols-2 gap-4">
+      <div className="lg:hidden grid grid-cols-2 place-items-center gap-4">
         {IMAGE_ARR.map((item) => (
           <motion.div
             variants={fadeInUpResponsive}
             initial="initial"
             whileInView="animate"
             key={item._id}
-            className={`${item.bgColor} rounded-full w-48 h-48 grid place-items-center`}
+            className={`${item.bgColor} rounded-full w-40 h-40 grid place-items-center`}
           >
             <img src={item.img} alt="cartoon" className="" />
           </motion.div>

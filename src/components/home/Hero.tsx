@@ -50,7 +50,7 @@ const fadeRight = {
 
 const Hero = () => {
   return (
-    <section className="main-container top-spacing bottom-spacing flex flex-col items-center text-center gap-4">
+    <section className="main-container top-spacing bottom-spacing flex flex-col items-center text-center gap-4 overflow-hidden">
       <motion.p
         variants={fadeInUp}
         initial="initial"
