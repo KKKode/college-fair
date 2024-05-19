@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: #161226 transparent;
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  width: 0.25em;
+  height: 0.25em;
+}
+::-webkit-scrollbar-thumb {
+  background: #161226;
+  border-radius: 10em;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+*:disabled {
+  cursor: not-allowed;
+}
+
+a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: white;
+  color: #161226;
+  font-family: "Public Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  scroll-behavior: smooth !important;
+}
+
+/* //? common styling */
+@layer components {
+  .main-container {
+    @apply w-full max-w-[1280px] mx-auto px-4 md:px-6;
+  }
+  .common-transition {
+    @apply transition-all ease-in-out duration-300 !important;
+  }
+  .top-spacing {
+    @apply pt-8 md:pt-12 lg:pt-16;
+  }
+  .bottom-spacing {
+    @apply pb-8 md:pb-12 lg:pb-16;
+  }
+  .title {
+    @apply text-2xl md:text-3xl lg:text-4xl text-primary font-semibold capitalize;
+  }
+  .description {
+    @apply text-sm text-slate-700 tracking-wider;
+  }
+  .btn-primary {
+    @apply tracking-wide capitalize bg-primary hover:bg-slate-900 text-white rounded-[30px] common-transition px-6 py-2.5;
+  }
+  .btn-secondary {
+    @apply text-sm tracking-wide capitalize bg-white text-primary rounded-sm common-transition px-4 py-2;
+  }
+}
+
+.gradient-btn {
+  background: linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(60deg, #0284c7, #e11d48) border-box;
+  color: #313149;
+  padding: 8px 16px;
+  border: 2px solid transparent;
+  border-radius: 40px;
+  /* display: inline-block; */
+  font-size: 14px;
+}
