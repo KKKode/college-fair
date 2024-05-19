@@ -63,7 +63,19 @@ const fadeInUp = {
     x: 0,
     transition: {
       delay: 0.05 * i,
-      duration: 0.1,
+    },
+  }),
+};
+const fadeInUpResponsive = {
+  initial: {
+    opacity: 0,
+    y: 100,
+  },
+  animate: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.05 * i,
     },
   }),
 };
@@ -90,7 +102,7 @@ const Profile = () => {
       <div className="lg:hidden grid grid-cols-2 gap-4">
         {IMAGE_ARR.map((item) => (
           <motion.div
-            variants={fadeInUp}
+            variants={fadeInUpResponsive}
             initial="initial"
             whileInView="animate"
             key={item._id}
